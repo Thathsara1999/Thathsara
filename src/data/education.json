@@ -1,0 +1,32 @@
+[
+    {
+        "role": "B. Sc. in Information Technology",
+        "organisation": "University of Jaffna",
+        "startDate": "2021",
+        "endDate": "2024",
+        "experiences": [
+            "Graduated with Honours, gaining solid foundations in software development, data structures, algorithms, and computer systems.",
+            "Completed projects involving backend development, networking, and cloud computing."
+        ],
+        "imageSrc": "projects/jaffna.png"
+    },
+    {
+        "role": "Software Engineer Trainee",
+        "organisation": "Physical Science Stream",
+        "startDate": "Jan, 2025",
+        "endDate": "Present",
+        "experiences": [],
+        "imageSrc": "projects/ijse.png"
+    },
+    {
+        "role": "Physical Science Stream",
+        "organisation": "C.W.W Kannangara Central College ,Mathugama, Sri Lanka",
+        "startDate": "",
+        "endDate": "",
+        "experiences": [
+            "GCE Advanced Level Examination (2020): Combined Maths C, Physics C, Chemistry C, General English C",
+            "GCE Ordinary Level Examination (2015):   6As, 1B, 2Cs"
+        ],
+        "imageSrc": "projects/school.png"
+    }
+]

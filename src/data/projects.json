@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Task Manager API",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["Express", "Node"],
+    "demo": "htps://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "E-Commerce API",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["Spring Boot"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Event Management System",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn the latest languages.",
+    "skills": ["React", "Spring Boot"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },{
+    "title": "Task Manager API",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["Express", "Node"],
+    "demo": "htps://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "E-Commerce API",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["Spring Boot"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Event Management System",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn the latest languages.",
+    "skills": ["React", "Spring Boot"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+]

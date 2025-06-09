@@ -1,0 +1,28 @@
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 120px;
+  transition: transform 0.2s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "role": "Software Engineer Trainee",
+    "organisation": "Ariso Technologies",
+    "startDate": "Jan, 2025",
+    "endDate": "Present",
+    "experiences": [
+      "Developed backend services for an event-driven Restaurant Task Management System using Node.js, Express, PostgreSQL, and Redis to optimize real-time communication and task execution.",
+      "Designed and implemented resource management features leveraging event-driven architecture to automate operations efficiently.",
+      "Integrated real-time task updates and notifications to ensure seamless system coordination.",
+      "Collaborated with clients for demos and feedback, improving the system iteratively.",
+      "Participated in agile ceremonies and worked closely with cross-functional teams to deliver high-quality software aligned with business needs."
+    ],
+    "imageSrc": "history/Ariso (2).png"
+  }
+]

@@ -1,0 +1,21 @@
+:root {
+  /* Colours */
+  --color-text: #ffffff; /* White text */
+  --color-primary: #0d6cf0; /* Blue accent */
+  --color-secondary: #142142; /* Deep blue */
+  --color-dark: #113fc7; /* Dark navy */
+  --color-bg: #163f79; /* Background color */
+
+  /* Fonts */
+  --font-roboto: "Roboto";
+}
+
+/* Apply to your main container */
+.App {
+  background: var(--color-bg);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--color-text);
+}
+  /* --color-dark: #113fc7; Dark navy */
