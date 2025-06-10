@@ -1,6 +1,5 @@
 @import "../../vars.css";
 
-/* ========== NAVBAR ========== */
 .navbar {
   position: fixed;
   top: 0;
@@ -9,17 +8,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 10%;
-  background-color: white; /* Ensure it's visible */
+  padding: 16px 10%;
+  background-color: white;
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
 }
+
+/* Group CV and Title */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .cv {
   display: inline-block;
   padding: 9px 19px;
-  font-size: 20px;
-  background-color: #0866cc; /* Blue */
+  font-size: 18px;
+  background-color: #0866cc;
   color: white;
   border: none;
   border-radius: 5px;
@@ -32,54 +38,68 @@
   background-color: #0056b3;
 }
 
-
 .title {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 600;
   text-decoration: none;
   color: black;
+  white-space: nowrap;
 }
 
-/* ========== MENU BUTTON (MOBILE TOGGLE) ========== */
-.menuBtn {
-  display: none;
-  cursor: pointer;
-}
-
-/* ========== DESKTOP MENU ========== */
+/* Desktop Menu */
 .menu {
   display: flex;
+  align-items: center;
+}
+
+.menuBtn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 .menuItems {
   display: flex;
-  gap: 47px;
+  gap: 40px;
   list-style: none;
 }
 
 .menuItems a {
-  font-size: 25px;
-  color:black;
+  font-size: 20px;
+  color: black;
   text-decoration: none;
 }
 
-/* ========== MOBILE STYLES ========== */
+/* Mobile Styles */
 @media screen and (max-width: 830px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 20px 10%;
+    padding: 12px 6%;
+  }
+
+  .brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .cv {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .title {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-right: 10%;
+    width: 100%;
+    margin-top: 10px;
     flex-direction: column;
     align-items: flex-end;
-    gap: 11px;
-    z-index: 998;
   }
 
   .menuBtn {
@@ -89,24 +109,27 @@
   .menuItems {
     display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 13px;
+    align-items: flex-start;
+    background: linear-gradient(0deg, rgba(25, 55, 109, 0.2) 0%, rgba(25, 55, 109, 1) 100%);
+    padding: 20px;
     border-radius: 10px;
-    background: linear-gradient(
-      0deg,
-      rgba(25, 55, 109, 0.2) 0%,
-      rgba(25, 55, 109, 1) 100%
-    );
-    padding: 24px 33px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    gap: 15px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
   }
 
   .menuOpen {
     display: flex;
   }
+
+  .menuItems a {
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+  }
 }
 
-/* ========== MAIN CONTENT SPACING TO AVOID OVERLAP ========== */
+/* Content spacing to avoid navbar overlap */
 .mainContent {
-  padding-top: 100px; /* Match to navbar height */
+  padding-top: 90px; /* match navbar height */
 }

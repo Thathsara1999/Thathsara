@@ -5,11 +5,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
+  margin-top: 120px; /* Increased to avoid overlap with navbar */
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .content {
@@ -37,6 +39,7 @@
   font-size: 30px;
   font-family: var(--font-roboto);
   margin-bottom: 52px;
+  text-align: left;
 }
 
 .contactBtn {
@@ -51,11 +54,9 @@
 }
 
 .heroImgContainer {
-    margin-top: 49px;
-  margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  align-items: center; /* Optional: for vertical centering */
+  align-items: center;
   width: 100%;
 }
 
@@ -71,50 +72,70 @@
   0% {
     transform: translate(0, 0px);
   }
-
   50% {
     transform: translate(0, 10px);
   }
-
   100% {
     transform: translate(0, -0px);
   }
 }
 
-.topBlur {
+.topBlur,
+.bottomBlur {
   position: absolute;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.topBlur {
   width: 50vw;
   height: 50vw;
   min-width: 350px;
-  min-width: 350px;
   top: -128px;
   left: -10vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
 }
 
 .bottomBlur {
-  position: absolute;
   width: 70vw;
   height: 50vw;
-  min-width: 350px;
   min-width: 250px;
   top: 246px;
   right: -25vw;
-  border-radius: 764px;
-  background: rgba(25, 55, 109, 0.7);
-  filter: blur(100px);
-  z-index: 0;
 }
 
+/* ========== MOBILE STYLES ========== */
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 130px; /* Ensure space for fixed navbar */
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
   }
 
   .content {
     align-items: center;
+  }
+
+  .title {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .contactBtn {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  .heroImg {
+    width: 70%;
   }
 }
