@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
-import { getImageUrl } from "../../utils";
+import { FaBars, FaTimes } from "react-icons/fa"; // Hamburger and close icons
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,34 +13,46 @@ export const Navbar = () => {
           href="/cv/Nawanka_Thathsara_CV.pdf"
           download="Nawanka_Thathsara_CV.pdf"
         >
-          My CV
+          My Resume
         </a>
         <a className={styles.title} href="/">
           Hi I'm Nawanka Thathsara
         </a>
+
+        {/* Hamburger / Close Icon */}
+        <div
+          className={styles.menuBtn}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Enter' && setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? (
+            <FaTimes size={28} color="black" />
+          ) : (
+            <FaBars size={28} color="black" />
+          )}
+        </div>
       </div>
 
-      <div className={styles.menu}>
-        <img
-          className={styles.menuBtn}
-          src={
-            menuOpen
-              ? getImageUrl("nav/closeIcon.png")
-              : getImageUrl("nav/menuIcon.png")
-          }
-          alt="menu-button"
-          onClick={() => setMenuOpen(!menuOpen)}
-        />
-        <ul
-          className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}
-          onClick={() => setMenuOpen(false)}
-        >
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+      <ul
+        className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}
+        onClick={() => setMenuOpen(false)}
+      >
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
     </nav>
   );
 };

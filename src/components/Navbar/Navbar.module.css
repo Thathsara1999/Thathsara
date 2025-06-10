@@ -5,25 +5,27 @@
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 10%;
   background-color: white;
   z-index: 999;
+  padding: 16px 10%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
 }
 
-/* Group CV and Title */
+/* Brand Section */
 .brand {
   display: flex;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
 }
 
+/* CV Button */
 .cv {
   display: inline-block;
-  padding: 9px 19px;
+  padding: 6px 12px;
   font-size: 18px;
   background-color: #0866cc;
   color: white;
@@ -38,31 +40,31 @@
   background-color: #0056b3;
 }
 
+/* Title */
 .title {
   font-size: 26px;
   font-weight: 600;
   text-decoration: none;
   color: black;
   white-space: nowrap;
+  margin-left: 20px;
+  flex: 1;
 }
 
-/* Desktop Menu */
-.menu {
-  display: flex;
-  align-items: center;
-}
-
+/* Menu Icon */
 .menuBtn {
   display: none;
-  width: 30px;
-  height: 30px;
   cursor: pointer;
+  margin-left: 10px; /* Add this to create space */
 }
 
+/* Menu Items */
 .menuItems {
   display: flex;
-  gap: 40px;
+  justify-content: flex-end;
   list-style: none;
+  gap: 40px;
+  margin-top: 15px;
 }
 
 .menuItems a {
@@ -71,51 +73,32 @@
   text-decoration: none;
 }
 
-/* Mobile Styles */
+/* MOBILE STYLES */
 @media screen and (max-width: 830px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 6%;
-  }
-
-  .brand {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .cv {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-
-  .title {
-    font-size: 18px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .menu {
-    width: 100%;
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: flex-end;
+    padding: 14px 6%;
   }
 
   .menuBtn {
     display: block;
+    z-index: 1000;
   }
 
   .menuItems {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    background: linear-gradient(0deg, rgba(25, 55, 109, 0.2) 0%, rgba(25, 55, 109, 1) 100%);
+    width: 100%;
+    /* Updated background: semi-transparent with blur */
+    background: rgba(25, 55, 109, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
     padding: 20px;
     border-radius: 10px;
+    margin-top: 10px;
     gap: 15px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-    width: 100%;
   }
 
   .menuOpen {
@@ -123,13 +106,7 @@
   }
 
   .menuItems a {
-    font-size: 16px;
-    padding: 10px 0;
+    font-size: 18px;
     width: 100%;
   }
-}
-
-/* Content spacing to avoid navbar overlap */
-.mainContent {
-  padding-top: 90px; /* match navbar height */
 }
